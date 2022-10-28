@@ -1,0 +1,24 @@
+body {
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  display: flex;
+  /* Fixe position des body elements */
+  position: fixed;
+  max-height: 100vh;
+}
+
+.scrollable > img {
+  width: 50vw;
+}
+
+.scrollable {
+  /* 
+  div mit Klassen "scrollable"
+  sollen scrollbar sein, wenn der
+  Inhalt größer ist als die Höhe
+  des Elternelements
+  */
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
