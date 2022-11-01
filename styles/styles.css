@@ -1,0 +1,61 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  /* Schriftart und Zeilenhöhe einstellen */
+  font-family: monospace;
+  line-height: 1.6;
+  /* Layout der Hauptseite einstellen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw;
+  /* 
+  min-height setzt die Größe des HTML Dokuments auf
+  "mindestens" 100 visual height, so dass die Seite
+  mindestens immer so groß wie der sichtbare Bereich ist.
+  */
+  min-height: 100vh;
+}
+
+main {
+  margin-top: 5vh;
+}
+
+h1 {
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--color-text);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+}
+
+.exercises {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.link-exercise {
+  border: 1px solid var(--color-text);
+  padding: 3vw;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}

@@ -1,0 +1,9 @@
+/* 
+Variablen anlegen, so dass wir sie überall verwenden
+können.
+*/
+html {
+  --color-background: black;
+  --color-text: white;
+  --color-link-hover: rgb(110, 255, 214);
+}

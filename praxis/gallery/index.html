@@ -5,12 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bildergallerie</title>
+  <!-- reset.css und settings.css wiederverwenden -->
+  <link rel="stylesheet" href="../../styles/reset.css">
+  <link rel="stylesheet" href="../../styles/settings.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- So werden Bilder in HTML verlinkt -->
   <div class="scrollable">
-    <h1>Mother of all Demos</h1>
+    <!-- <div> für Titelinformationen mti Überschriften -->
+    <div class="title">
+      <h1>1968</h1>
+      <h2>Mother of all Demos</h2>
+    </div>
     <img src="./images/mother-of-all-demos/mouse1.webp">
     <img src="./images/mother-of-all-demos/keyboard+mouse.webp">
     <img src="./images/mother-of-all-demos/presentation.webp">
@@ -18,11 +25,24 @@
     <img src="./images/mother-of-all-demos/mouse2.webp">
   </div>
   <div class="scrollable">
-    <h1>Arpanent</h1>
+    <div class="title">
+      <h1>1969 - 1990</h1>
+      <h2>ARPANET</h2>
+    </div>
     <img src="./images/arpanet/1969a_ARPANET_619x316.webp">
     <img src="./images/arpanet/four-men-stand-in-uclas-3420-boelter-hall-in-the-1960s.webp">
     <img src="./images/arpanet/image-20161102-27228-1iicfpi.webp">
     <img src="./images/arpanet/image-20161102-27243-uve388.webp">
+  </div>
+
+  <div class="scrollable">
+    <div class="title">
+      <h1>1980</h1>
+      <h2>ENQUIRE/Erfindung des Internets</h2>
+    </div>
+    <img src="./images/internet-cern/tim-berners-lee.webp">
+    <img src="./images/internet-cern/first-web-server.webp">
+    <img src="./images/internet-cern/a05e99d7-0001-0005-0000-000001449223_w619_r1.0316666666666667_fpx55.26_fpy55.webp">
   </div>
 </body>
 </html>

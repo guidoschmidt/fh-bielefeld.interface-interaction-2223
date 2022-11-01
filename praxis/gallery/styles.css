@@ -1,14 +1,20 @@
 body {
-  background: rgb(0, 0, 0);
-  color: #ffffff;
-  display: flex;
-  /* Fixe position des body elements */
+  /* Schriftart einstellen */
+  font-family: monospace;
+  /* Farben via settings.css Variablen einstellen */
+  background-color: var(--color-background);
+  color: var(--color-text);
+  /* 
+  Feste Größe für das <body> element, damit darin liegende
+  <div> Elemente einzeln scrollbar gemacht werden können.
+  */
   position: fixed;
-  max-height: 100vh;
-}
-
-.scrollable > img {
-  width: 50vw;
+  width: 100vw;
+  height: 100vh;
+  /* Layout auf 3 spaltiges Grid System einstellen */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .scrollable {
@@ -21,15 +27,38 @@ body {
   overflow: scroll;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  gap: 40px;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Scrollbars für Chrome, Safari and Opera ausblenden */
 .scrollable::-webkit-scrollbar {
   display: none;
 }
 
 .scrollable {
-  /* Hide scrollbar for IE, Edge and Firefox */
+  /* Scrollbars im Internet Explorer, Edge and Firefox ausblenden */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.scrollable > .title {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  line-height: 1.4;
+}
+
+.scrollable > .title > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.scrollable > .title > h2 {
+  font-size: 1.75rem;
 }

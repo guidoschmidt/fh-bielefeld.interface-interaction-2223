@@ -5,16 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guidos Skizzenbuch</title>
-  <link rel="stylesheet" href="./styles.css">
+  <!-- 
+    1. 'styles' Ordner anlegen
+    2. reset.css einbinden, um Browserübergreifend einen einheitlichen basis Stylesheet zu erhalten.
+    3. settings.css einbinden. Dort speichern wir CSS Variablen.
+  -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/settings.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-  <h1>Skizzenbuch</h1>
-  <h2>Aufgaben</h2> 
-  <div>
-    <a href="./praxis/gallery/index.html">Bildergallerie</a>
-  </div>
-  <h2>Assignments</h2>
-  <div>
-  </div>
+  <!-- header Bereich enthält sichtbare Titelüberschriften -->
+  <header>
+    <h3>Interface & Interaction</h3>
+    <h5>Wintersemseter 2022/2023</h5>
+    <h1>Skizzenbuch</h1>
+  </header>
+
+  <!-- main Bereich enthält den Hauptinhalt der Seite -->
+  <main>
+    <h2>Aufgaben</h2> 
+    <div class="exercises">
+      <a class="link-exercise" 
+         href="./praxis/gallery/index.html">
+         Bildergallerie
+      </a>
+    </div>
+
+    <h2>Assignments</h2>
+    <div>
+      <p>... Coming soon</p>
+    </div>
+  </main>
 </body>
 </html>
