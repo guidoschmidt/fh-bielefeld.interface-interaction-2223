@@ -1,0 +1,56 @@
+@import "../../styles/reset.css";
+
+html {
+  --background-color-mobile: rgb(255, 0, 140);
+  --background-color-tablet: rgb(0, 255, 204);
+  --background-color-desktop: rgb(0, 149, 255);
+  
+  /* 1. Feste Haupt-Schriftgröße in Pixeln festlegen
+  /* font-size: */
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+h1 {
+  font-weight: bold;
+  /* 2. Relative Schriftgröße mit rem festlegen */
+  /* font-size: */
+html {
+  --background-color-mobile: rgb(255, 0, 140);
+  --background-color-tablet: rgb(0, 255, 204);
+  --background-color-desktop: rgb(0, 149, 255);
+
+  --breakpoint-tablet: 480px;
+  --breakpoint-desktop: 1024px;
+ 
+  /* TODO: Basis Schriftgröße in px */
+  /*font-size: ;*/
+}
+
+
+h1 {
+  /* TODO: Relative Schriftgröße in rem */
+  /*font-size: ;*/
+  font-weight: bold;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+/* TODO: responsive font-size */
+/* TODO: Media-queries */

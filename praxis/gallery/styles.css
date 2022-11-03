@@ -1,3 +1,7 @@
+/* reset.css und settings.css wiederverwenden */
+@import "../../styles/reset.css";
+@import "../../styles/settings.css";
+
 body {
   /* Schriftart einstellen */
   font-family: monospace;

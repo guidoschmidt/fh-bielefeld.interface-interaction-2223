@@ -1,3 +1,6 @@
+@import "./reset.css";
+@import "./settings.css";
+
 body {
   background-color: var(--color-background);
   color: var(--color-text);
@@ -44,18 +47,45 @@ a:hover {
   border-color: var(--color-link-hover);
 }
 
-.exercises {
+.exercises,
+.assignments {
   margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-.link-exercise {
+.link-exercise,
+.link-assignment {
   border: 1px solid var(--color-text);
   padding: 3vw;
   color: var(--color-text);
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+}
+
+.portrait > img {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+article {
+  font-size: 1.5rem;
+}
+
+section {
+  margin-bottom: 50px;
 }
