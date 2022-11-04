@@ -19,10 +19,6 @@
 - Neue **styles.css** Datei in `praxis/responsive/`
 - **styles.css**:
   - `@import` von `reset.css`
-  - Breakpoints als Variablen speichern 
-    mobile: < 480px
-    tablet: < 1024px
-    desktop: > 1024px
   - Media queries verwenden, um die drei <h1> unterschiedlich einzufärben
   - Media queries verwenden, um jeweils nur die entsprechende <h1> anzuzeigen
     (andere <h1> auf `display: none` stellen)

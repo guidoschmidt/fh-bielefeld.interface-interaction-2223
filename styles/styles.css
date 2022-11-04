@@ -5,6 +5,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   /* Schriftart und Zeilenhöhe einstellen */
+  /* sans-serif, serif, monospace */
   font-family: monospace;
   line-height: 1.6;
   /* Layout der Hauptseite einstellen */

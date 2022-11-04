@@ -1,12 +1,12 @@
 @import "../../styles/reset.css";
 
 html {
-  --background-color-mobile: rgb(255, 0, 140);
-  --background-color-tablet: rgb(0, 255, 204);
-  --background-color-desktop: rgb(0, 149, 255);
-  
-  /* 1. Feste Haupt-Schriftgröße in Pixeln festlegen
-  /* font-size: */
+  --color-background-mobile: rgb(32, 243, 32);
+  --color-background-tablets: rgb(71, 71, 250);
+  --color-background-desktops: rgb(255, 36, 58);
+
+  /* 1. Feste Haupt-Schriftgröße in Pixeln festlegen */
+  font-size: 20px;
 }
 
 main {
@@ -22,35 +22,60 @@ main {
 h1 {
   font-weight: bold;
   /* 2. Relative Schriftgröße mit rem festlegen */
-  /* font-size: */
-html {
-  --background-color-mobile: rgb(255, 0, 140);
-  --background-color-tablet: rgb(0, 255, 204);
-  --background-color-desktop: rgb(0, 149, 255);
-
-  --breakpoint-tablet: 480px;
-  --breakpoint-desktop: 1024px;
- 
-  /* TODO: Basis Schriftgröße in px */
-  /*font-size: ;*/
-}
-
-
-h1 {
-  /* TODO: Relative Schriftgröße in rem */
-  /*font-size: ;*/
-  font-weight: bold;
-}
-
-main {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: monospace;
+  font-size: 2rem;
 }
 
 /* TODO: responsive font-size */
+.responsive-font {
+  font-size: calc(1rem + 6vw);
+}
+
 /* TODO: Media-queries */
+/* Für alle Bildschirme mit einer maximalen Größe von 480px:
+   Färbe die Hintergroundfarbe von main mit der Variable 
+   --color-background-mobile ein.
+*/
+@media screen and (max-width: 480px) {
+  main {
+    background-color: var(--color-background-mobile);
+  }
+  .mobile-only {
+    display: flex;
+  }
+  .tablet-only {
+    display: none;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    background-color: var(--color-background-tablets);
+  }
+  .mobile-only {
+    display: none;
+  }
+  .tablet-only {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    background-color: var(--color-background-desktops);
+  }
+  .mobile-only {
+    display: none;
+  }
+  .tablet-only {
+    display: none;
+  }
+  .desktop-only {
+    display: flex;
+  }
+}
