@@ -27,7 +27,7 @@ h1 {
 
 /* TODO: responsive font-size */
 .responsive-font {
-  font-size: calc(1rem + 6vw);
+  font-size: calc(1rem + 2vw);
 }
 
 /* TODO: Media-queries */
