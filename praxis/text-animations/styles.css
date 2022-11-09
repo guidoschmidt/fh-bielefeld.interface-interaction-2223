@@ -1,0 +1,37 @@
+@import "../../styles/reset.css";
+@import "../../styles/settings.css";
+
+html {
+  font-size: calc(16px + 1vw);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 10vw;
+  font-family: serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 3vh;
+  color: rgb(255, 191, 43);
+}
+
+.author {
+  margin-top: 5vh;
+  opacity: 0.5;
+  align-self: flex-end;
+}
