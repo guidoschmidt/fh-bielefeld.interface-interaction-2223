@@ -1,0 +1,24 @@
+// @TODO
+// Evtl. musst du hier die Pfade
+// zu deinen Styleeshets überprüfen
+// und anpassen
+@use "../../styles/reset.css";
+@use "../../styles/settings.css";
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+.button-back {
+  font-size: calc(20px + 1vw);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+}
