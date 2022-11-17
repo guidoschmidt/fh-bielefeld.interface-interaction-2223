@@ -1,0 +1,83 @@
+@import "../../styles/reset.css";
+@import "../../styles/settings.css";
+
+html {
+  font-size: calc(16px + 1vw);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 10vw;
+  font-family: serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 3vh;
+  color: rgb(255, 191, 43);
+}
+
+.author {
+  margin-top: 5vh;
+  opacity: 0.5;
+  align-self: flex-end;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin line-animation($delay) {
+  /* Anfangswert für opacity setzen */
+  opacity: 0;
+  animation: fadeIn 1.0s ease;
+  /* animation-fill-mode "hält" den letzen
+     Wert der animation. In diesem Fall opacity: 1 */
+  animation-fill-mode: forwards;
+  animation-delay: $delay;
+}
+
+@for $var from 1 to 8 {
+  // Wiederhole alles hier drin 7 mal 
+  // #{ $i } verwende den Wert der Variablen
+  strong:nth-child(#{ $var }) {
+   // s steht hier für Sekunden
+   @include line-animation(#{ $var - 1 }s);
+  }
+}
+
+@keyframes break {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.broken {
+  display: inline-flex;
+  animation: break 0.2s linear;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
