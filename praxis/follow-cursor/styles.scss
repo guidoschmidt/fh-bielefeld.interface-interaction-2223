@@ -1,0 +1,29 @@
+@use "../../styles/reset.css";
+@use "../../styles/settings.css";
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  overflow: hidden;
+  cursor: none;
+}
+
+.mouse-controlled-rectangle {
+  background-color: white;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transition: width 200ms ease, 
+              height 200ms ease, 
+              background-color 500ms ease,
+              border-radius 200ms ease;
+  &.changed-shape {
+    // @TODO 
+    // Wie soll das Quadrat aussehen, wenn es die Klasse "large" hat?
+  }
+}
