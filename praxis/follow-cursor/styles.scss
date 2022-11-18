@@ -1,4 +1,4 @@
-@use "../../styles/reset.css";
+@use "../../styles/styles.css";
 @use "../../styles/settings.css";
 
 body {
@@ -10,7 +10,7 @@ body {
   align-items: center;
   font-family: monospace;
   overflow: hidden;
-  cursor: none;
+  //cursor: none;
 }
 
 .mouse-controlled-rectangle {
@@ -24,6 +24,9 @@ body {
               border-radius 200ms ease;
   &.changed-shape {
     // @TODO 
-    // Wie soll das Quadrat aussehen, wenn es die Klasse "large" hat?
+    // Wie soll das Quadrat aussehen, wenn es die Klasse "changed-shape" hat?
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
   }
 }
