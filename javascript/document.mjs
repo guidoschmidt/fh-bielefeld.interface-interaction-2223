@@ -28,3 +28,12 @@ export function runWhenPointerMoves(calback) {
     onChange();
   };
 }
+
+export function runWhenKeyPressed(callback) {
+  const cursor = document.createElement("span");
+  cursor.className = "cursor";
+  document.body.appendChild(cursor);
+  window.onkeydown = (ev) => {
+    callback(ev.key);
+  }
+}

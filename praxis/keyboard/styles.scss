@@ -1,0 +1,29 @@
+@use "../../styles/reset.css";
+@use "../../styles/settings.css";
+
+@keyframes blink {
+  0% { opacity: 0; }
+  29% { opacity: 1; }
+  30% { opacity: 1; }
+  60% { opacity: 1; }
+  61% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+body {
+  padding: 40px;
+  font-size: calc(20px + 2vw);
+  font-family: monospace;
+  line-height: 1.4;
+  line-break: anywhere;
+
+  .cursor {
+    animation: blink 0.5s linear;
+    animation-iteration-count: infinite;
+    &:after {
+      display: inline-flex;
+      content: "_";
+      color: rgb(215, 0, 75);
+    }
+  }
+}
