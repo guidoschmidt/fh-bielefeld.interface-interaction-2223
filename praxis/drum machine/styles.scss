@@ -1,0 +1,46 @@
+@import "../../styles/reset.css";
+@import "../../styles/settings.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: monospace;
+  font-size: 16px;
+
+  h1 {
+    font-size: calc(2.5rem + 1vw);
+  }
+
+  .drum-machine {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 40px;
+    button {
+      padding: 20px;
+      font-size: calc(1rem + 1vw);
+      border: 0;
+      background-color: transparent;
+      color: var(--color-text);
+      border: 2px solid var(--color-text);
+      cursor: pointer;
+      &.play {
+        background-color: var(--color-link-hover);
+        border-color: var(--color-link-hover);
+        color: var(--color-background);
+      }
+      &:hover {
+        background-color: var(--color-link-hover);
+        border-color: var(--color-link-hover);
+        color: var(--color-background);
+      }
+    }
+  }
+}
