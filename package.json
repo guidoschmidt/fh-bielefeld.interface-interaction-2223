@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/guidoschmidt/interface-interaction-2223#readme",
   "dependencies": {
+    "p5": "^1.5.0",
+    "sass": "^1.56.1",
     "vite": "^3.2.3"
   }
 }

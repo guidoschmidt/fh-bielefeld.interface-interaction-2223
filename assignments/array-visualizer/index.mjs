@@ -19,10 +19,16 @@ runWhenDocumentIsLoaded(() => {
   // https://wiki.selfhtml.org/wiki/JavaScript/Objekte/Array/push
 
   // HIER KOMMT DEIN CODE ZUM BEFÜLLEN HIN
+  listOfThings.push(1);
+  listOfThings.push(2);
+  listOfThings.push(3);
+  listOfThings.push("Tschüss");
+  listOfThings.push("Test");
+  listOfThings.push(true);
 
 
 
-  function getArraItemAtIndex(index) {
+  function getArrayItemAtIndex(index) {
     // @TODO #3
     // Diese Funktion soll gemäß ihres Names ("getArrayItemAtIndex")
     // das Element an einer bestimmten Stelle (index) zurückgeben. 
@@ -31,7 +37,8 @@ runWhenDocumentIsLoaded(() => {
     // korrekten Wert an der Stelle im Array zurück zu geben.
 
     // HIER MUSST DU undefined ERSETZEN
-    return undefined;
+    //console.log(index);
+    return listOfThings[index];
   }
   
   function deleteArrayItem(element) {
@@ -43,6 +50,11 @@ runWhenDocumentIsLoaded(() => {
     // verwenden, um das gegebene Element aus dem Array zu löschen.
 
     // HIER KOMMT DEIN CODE HIN, DER ELEMENTE AUS listOfThings LÖSCHT
+    let index = listOfThings.indexOf(element);
+    console.log("Wagennummer für " + element + " ist " + index);
+    let deleteAtIndex = index;
+    let howMuchToDelete = 1;
+    listOfThings.splice(deleteAtIndex, howMuchToDelete);
   }
   
   function replaceArrayItem(element, newValue) {
@@ -57,12 +69,17 @@ runWhenDocumentIsLoaded(() => {
 
     // HIER KOMMT DEIN CODE HIN, DER ELEMENTE IM ARRAY DURCH
     // newValue ERSETZT
-  }
 
+    // Wagennummer herausfinden
+    const index = listOfThings.indexOf(element);
+    // [] "Kran"-Zugriff mit eckigen Klammern, um den Wagen zu befüllen
+    // Neue Ladung für den "Kran"
+    listOfThings[index] = newValue;
+  }
 
   visualizeArray(
     listOfThings,
-    getArraItemAtIndex,
+    getArrayItemAtIndex,
     deleteArrayItem,
     replaceArrayItem
   );

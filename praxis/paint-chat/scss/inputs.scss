@@ -1,0 +1,151 @@
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+input {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid black;
+  padding: 15px 0;
+  font-size: calc(10px + 0.5vw);
+  font-family: monospace;
+}
+
+input[type=color] {
+  outline: 0;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+input[type="range"] {
+  --color-foreground: white;
+  --color-highlight: black;
+  --color-accent: black;
+  --height-slider: 2px;
+  --thumb-multipier: 8; 
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  margin: 2px 0;
+  border: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  /* Safari */
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: calc(var(--height-slider) * var(--thumb-multipier));
+    width: calc(var(--height-slider) * var(--thumb-multipier));
+    border-radius: calc(var(--height-slider) * var(--thumb-multipier));
+    background: var(--color-foreground);
+    cursor: pointer;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: -4px;
+    &:hover {
+      background: var(--color-highlight);
+    }
+  }
+
+  /* Firefox */
+  &::-moz-range-thumb {
+    border: none;
+    height: calc(var(--height-slider) * var(--thumb-multipier));
+    width: calc(var(--height-slider) * var(--thumb-multipier));
+    border-radius: calc(var(--height-slider) * var(--thumb-multipier));
+    background: var(--color-foreground);
+    border: 2px solid black;
+    cursor: pointer;
+    &:hover {
+      background: var(--color-highlight);
+    }
+  }
+
+  /* Internet Explorer */
+  &::-ms-thumb {
+    border: none;
+    height: calc(var(--height-slider) * var(--thumb-multipier));
+    width: calc(var(--height-slider) * var(--thumb-multipier));
+    border-radius: calc(var(--height-slider) * var(--thumb-multipier));
+    background: var(--color-foreground);
+    cursor: pointer;
+    &:hover {
+      background: var(--color-highlight);
+    }
+  }
+
+  // Styling the range track
+  &::-webkit-slider-runnable-track,
+  &:focus::-webkit-slider-runnable-track,
+  &::-moz-range-track {
+      width: 100%;
+      height: var(--height-slider);
+      cursor: pointer;
+      background: var(--color-accent);
+      border-radius: var(--height-slider);
+      border: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+      background: var(--color-accent);
+      margin: 0;
+      height: var(--height-slider);
+      width: 100%;
+      border: none;
+      border-radius: var(--height-slider);
+      padding: 0;
+  }
+
+  &::-ms-track {
+      width: 100%;
+      height: var(--height-slider);
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+  }
+
+  &::-ms-fill-lower {
+      background: var(--color-accent);
+      border: none;
+      border-radius: var(--height-slider);
+  }
+
+  &:focus::-ms-fill-lower {
+      background: var(--color-accent);
+  }
+
+  &::-ms-fill-upper {
+      background: var(--color-accent);
+      border: none;
+      border-radius: var(--height-slider);
+  }
+
+  &:focus::-ms-fill-upper {
+      background: var(--color-accent);
+  }
+}
+

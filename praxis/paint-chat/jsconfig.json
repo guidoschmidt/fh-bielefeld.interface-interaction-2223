@@ -1,0 +1,9 @@
+{
+  "include": [
+    "*.js",
+    "*.mjs",
+    "**/*.js",
+    "**/*.mjs",
+    "./autocompletion/global.d.ts"
+  ]
+}

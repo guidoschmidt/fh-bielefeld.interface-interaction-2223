@@ -21,7 +21,10 @@ function reactOnKey(key) {
       // Letzes Element auf der Seite löschen
       // Was ist das letze element?
       const textElementList = document.querySelectorAll(".text");
+      console.log(typeof textElementList);
+      console.log(textElementList);
       const lastElement = textElementList[textElementList.length - 1];
+      console.log(lastElement);
       if (lastElement !== undefined) {
         lastElement.remove()
       }

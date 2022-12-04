@@ -1,0 +1,71 @@
+@import "./_reset.css";
+@import "./_settings.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: monospace;
+  font-size: 16px;
+
+  h1 {
+    font-size: calc(2.5rem + 1vw);
+  }
+
+  .sequencer {
+    --color-text: black;
+    --color-sound: white;
+    --color-highlight: rgb(187, 255, 99);
+
+    margin: 40px auto;
+    display: grid;
+    justify-content: start;
+    gap: 10px;
+    grid-auto-flow: column;
+
+    .step {
+      border: 0;
+      background-color: transparent;
+      color: var(--color-sound);
+      border: 2px solid var(--color-sound);
+      padding: 30px;
+      transition: border 100ms linear, background 300ms ease;
+
+      &.Kick {
+      }
+      
+      &.Snare {
+      }
+      
+      &.Clap {
+      }
+
+      &.on {
+        background-color: var(--color-sound);
+        color: var(--color-text);
+      }
+      
+      &.active {
+        color: var(--color-text);
+        border-color: var(--color-highlight);
+        background-color: var(--color-highlight);
+      }
+      
+      &:hover {
+        background-color: var(--color-highlight);
+      }
+    }
+  }
+
+  .play {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    border: 0;
+    padding: 20px;
+  }
+}

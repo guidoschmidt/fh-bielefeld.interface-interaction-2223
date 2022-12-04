@@ -1,0 +1,28 @@
+@use "./reset.scss";
+@use "./inputs.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ui {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  font-family: monospace;
+  gap: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  canvas {
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  }
+}
